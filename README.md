@@ -1,77 +1,105 @@
-🎮 Tic-Tac-Toe (JavaScript DOM Game)
+💱 Currency Exchanger (JavaScript DOM Project)
 
-A minimal, elegant Tic-Tac-Toe game built with vanilla JavaScript, focusing on DOM manipulation, clean UI, and clear game logic.
-No frameworks. No libraries. Just the fundamentals done right.
+A clean, beginner-friendly currency exchanger built using vanilla JavaScript, focused on DOM manipulation, API handling, and clear separation of UI and logic.
+No frameworks. No libraries. Just fundamentals done properly.
+
+⸻
+<img width="1440" height="900" alt="Screenshot 2025-12-18 at 7 16 37 PM" src="https://github.com/user-attachments/assets/0c2ed52d-07c4-4249-856c-b8619a49e99f" />
+<img width="1440" height="900" alt="Screenshot 2025-12-18 at 7 17 04 PM" src="https://github.com/user-attachments/assets/b26edae8-eae0-40e4-8aa1-c438d5b0434c" />
+
+Features
+• Currency selection using dynamic dropdowns
+• Country flags update automatically based on currency
+• Real-time exchange rates using a public API
+• Input validation for safe conversion
+• Clear conversion result display
+• Simple, responsive UI
+• Frontend-only implementation
 
 ⸻
 
- Features
-	•	Interactive 3×3 Tic-Tac-Toe board
-	•	Turn-based gameplay (X vs O)
-	•	Automatic win detection
-	•	Game status display (turns & winner)
-	•	Reset functionality
-	•	Modern dark UI with smooth visuals
-	•	Fully responsive layout
-
-⸻
-
- What This Project Demonstrates
+What This Project Demonstrates
 
 This project was built to practice and demonstrate:
-	•	DOM selection and manipulation
-	•	Event handling in JavaScript
-	•	Game state management
-	•	Conditional logic for win detection
-	•	Clean separation of UI and logic
-	•	Writing readable, maintainable frontend code
+• DOM selection and manipulation
+• Dynamic creation of <option> elements
+• Event handling (change, click)
+• Working with asynchronous JavaScript (async / await)
+• Fetching and using data from an external API
+• Basic input validation
+• Clean separation of data, logic, and UI
 
-Small project, strong fundamentals.
+Small project. Strong JavaScript fundamentals.
 
 ⸻
 
 🛠️ Tech Stack
-	•	HTML5 – structure
-	•	CSS3 – layout, styling, dark theme
-	•	JavaScript (ES6) – game logic & DOM control
+• HTML5 – structure
+• CSS3 – layout and styling
+• JavaScript (ES6) – logic, DOM control, API calls
 
-No external dependencies.
-
-⸻
-
-📸 Screenshot
-<img width="1440" height="900" alt="Screenshot 2025-12-15 at 1 53 00 AM" src="https://github.com/user-attachments/assets/12444b6e-eb9e-44c0-82c5-6dae0f1c2453" />
-
-<img width="1440" height="900" alt="Screenshot 2025-12-15 at 1 53 08 AM" src="https://github.com/user-attachments/assets/141bcf1d-46fb-4ecf-b6c5-98c1c43477d8" />
+No external libraries or frameworks used.
 
 ⸻
 
-⚙️ How the Game Works (DOM Logic Explained)
+🌐 API Used
 
-This game is entirely controlled using JavaScript DOM manipulation.
-	•	Each cell of the board is a DOM element (div/button).
-	•	A JavaScript array stores the current board state.
-	•	Clicking a cell triggers an event listener.
-	•	The current player (X or O) is inserted into the clicked cell.
-	•	After every move:
-	•	The board state is updated
-	•	Win conditions are checked
-	•	The turn is switched
+Currency Exchange API
+https://latest.currency-api.pages.dev/v1/currencies/
 
-Win Detection
-	•	All possible winning combinations (rows, columns, diagonals) are predefined.
-	•	After each move, the game checks whether the current player occupies all positions of any winning pattern.
-	•	If a match is found:
-	•	The game status updates to show the winner
-	•	Further clicks are disabled
+• Free to use
+• No API key required
+• Uses lowercase currency codes
 
-Reset Logic
-	•	The Reset button clears:
-	•	Board UI
-	•	Internal game state
-	•	Active player
-	•	The game starts fresh without reloading the page.
+Flags API
+https://flagsapi.com/{COUNTRY_CODE}/flat/64.png
 
+• Used to display country flags dynamically
 
+⸻
+
+⚙️ How the App Works (DOM Logic Explained)
+
+The entire application is controlled using JavaScript DOM manipulation.
+
+• Currency dropdowns are populated dynamically from a countryList object
+• Each dropdown listens for change events
+• When a currency changes:
+• The corresponding country code is retrieved
+• The flag image is updated dynamically
+
+Amount Validation
+• Empty, zero, or negative values are rejected
+• Default value is set to 1 to avoid invalid calculations
+
+⸻
+
+Currency Conversion Logic
+
+• The selected “from” currency is used to fetch exchange data
+• Exchange rates are extracted from the API response
+• The selected “to” currency rate is applied
+• The converted amount is calculated and rounded
+• The result is displayed dynamically without reloading the page
+
+Example output:
+1 USD = 109.35 BDT
+
+⸻
+
+📁 Project Structure
+
+• index.html – markup
+• style.css – styling
+• script.js – logic and API handling
+• countryList.js – currency-to-country mapping
+
+⸻
+
+📌 Notes
+
+• This project is intentionally simple
+• Focus is on understanding how JavaScript works with the DOM
+• Designed for learning, practice, and extension
 
 Free to use for learning and experimentation.
